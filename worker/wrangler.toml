@@ -14,3 +14,8 @@ ALLOWED_ORIGIN = "https://communityfaithwalk.com"
 # GOOGLE_SERVICE_ACCOUNT_EMAIL
 # GOOGLE_PRIVATE_KEY
 # SPREADSHEET_ID
+
+[observability]
+[observability.logs]
+enabled = false
+invocation_logs = true
