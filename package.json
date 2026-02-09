@@ -1,0 +1,22 @@
+{
+  "name": "communityfaithwalk",
+  "version": "1.0.0",
+  "description": "Faith Walk Event Website",
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:worker": "cd worker && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "deploy:worker": "cd worker && npm run deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/communityfaithwalk.com.git"
+  },
+  "keywords": [
+    "faith-walk",
+    "event",
+    "church"
+  ],
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,15 @@
+name = "faithwalk-api"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# Custom domain routing (configure in Cloudflare dashboard)
+# Route: communityfaithwalk.com/api/*
+
+[vars]
+# Non-sensitive environment variables can go here
+ALLOWED_ORIGIN = "https://communityfaithwalk.com"
+
+# Secrets (set via: wrangler secret put SECRET_NAME)
+# GOOGLE_SERVICE_ACCOUNT_EMAIL
+# GOOGLE_PRIVATE_KEY
+# SPREADSHEET_ID
