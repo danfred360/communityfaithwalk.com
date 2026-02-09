@@ -140,9 +140,10 @@ input[type="number"]:focus {
   border-color: var(--primary-color);
 }
 
-input[type="text"]:invalid,
-input[type="email"]:invalid,
-input[type="number"]:invalid {
+/* Only show red border on invalid inputs after form submission or user interaction */
+input[type="text"].error,
+input[type="email"].error,
+input[type="number"].error {
   border-color: var(--error-color);
 }
 
