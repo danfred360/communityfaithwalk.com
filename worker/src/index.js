@@ -29,8 +29,9 @@ export default {
       });
     }
 
-    // Only allow POST requests for API endpoints
-    if (request.method !== 'POST') {
+    // Allow GET for test endpoint, POST for others
+    const isTestEndpoint = url.pathname === '/api/test';
+    if (!isTestEndpoint && request.method !== 'POST') {
       return new Response(
         JSON.stringify({ success: false, message: 'Method not allowed' }),
         {
@@ -50,6 +51,24 @@ export default {
       response = await handleRSVP(request, env);
     } else if (url.pathname === '/api/signup') {
       response = await handleEmailSignup(request, env);
+    } else if (url.pathname === '/api/test') {
+      // Test endpoint to verify secrets are configured
+      response = new Response(
+        JSON.stringify({
+          success: true,
+          configured: {
+            email: !!env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+            privateKey: !!env.GOOGLE_PRIVATE_KEY,
+            spreadsheetId: !!env.SPREADSHEET_ID,
+            privateKeyLength: env.GOOGLE_PRIVATE_KEY ? env.GOOGLE_PRIVATE_KEY.length : 0,
+            privateKeyStart: env.GOOGLE_PRIVATE_KEY ? env.GOOGLE_PRIVATE_KEY.substring(0, 30) : 'N/A',
+          },
+        }),
+        {
+          status: 200,
+          headers: { 'Content-Type': 'application/json' },
+        }
+      );
     } else {
       response = new Response(
         JSON.stringify({ success: false, message: 'Not found' }),

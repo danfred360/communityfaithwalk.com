@@ -1,4 +1,4 @@
-import { appendToRSVPSheet } from '../services/google-sheets.js';
+import { appendToRSVPSheet } from '../services/google-sheets-fetch.js';
 
 export async function handleRSVP(request, env) {
   try {

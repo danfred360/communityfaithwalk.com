@@ -1,4 +1,4 @@
-import { appendToEmailSheet } from '../services/google-sheets.js';
+import { appendToEmailSheet } from '../services/google-sheets-fetch.js';
 
 export async function handleEmailSignup(request, env) {
   try {
