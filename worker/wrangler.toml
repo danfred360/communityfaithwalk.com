@@ -17,5 +17,5 @@ ALLOWED_ORIGIN = "https://communityfaithwalk.com"
 
 [observability]
 [observability.logs]
-enabled = false
+enabled = true
 invocation_logs = true
