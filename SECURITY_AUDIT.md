@@ -157,7 +157,6 @@ The Community Faith Walk website has been audited for security vulnerabilities. 
 ### Public Endpoints
 1. **POST /api/rsvp** - Validated, rate-limitable
 2. **POST /api/signup** - Validated, rate-limitable
-3. **GET /api/test** - Debug endpoint (consider removing in production)
 
 ### Potential Attack Vectors
 | Attack Type | Risk Level | Mitigation |
