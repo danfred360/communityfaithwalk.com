@@ -10,6 +10,16 @@ function getCorsHeaders(origin) {
   };
 }
 
+function getSecurityHeaders() {
+  return {
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',
+    'X-XSS-Protection': '1; mode=block',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'Permissions-Policy': 'geolocation=(), microphone=(), camera=()',
+  };
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -79,9 +89,12 @@ export default {
       );
     }
 
-    // Add CORS headers to response
+    // Add CORS and security headers to response
     const headers = new Headers(response.headers);
     Object.entries(getCorsHeaders(corsOrigin)).forEach(([key, value]) => {
+      headers.set(key, value);
+    });
+    Object.entries(getSecurityHeaders()).forEach(([key, value]) => {
       headers.set(key, value);
     });
 
