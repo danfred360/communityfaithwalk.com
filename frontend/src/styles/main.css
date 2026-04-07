@@ -38,21 +38,25 @@ body {
 }
 
 header {
-  background-color: var(--primary-color);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--primary-color);
   padding: var(--spacing-lg) var(--spacing-md);
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-  font-size: 2rem;
-  margin-bottom: var(--spacing-sm);
+.header-logo {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto var(--spacing-sm);
 }
 
 header p {
   font-size: 1.1rem;
-  opacity: 0.9;
+  color: var(--primary-color);
+  opacity: 0.8;
 }
 
 main {

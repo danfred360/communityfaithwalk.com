@@ -7,8 +7,8 @@ function App() {
   return (
     <div className="app">
       <header>
-        <h1>Community Faith Walk 2026</h1>
-        <p>Join us for a day of fellowship, worship, and community</p>
+        <img src="/logo.png" alt="Community Faith Walk" className="header-logo" />
+        <p>Come walk with purpose. All are welcome!</p>
       </header>
 
       <main>

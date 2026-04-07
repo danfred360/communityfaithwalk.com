@@ -5,17 +5,17 @@ export default function EventInfo() {
 
       <div className="info-item">
         <strong>Date:</strong>
-        <span>Saturday, June 14, 2026</span>
+        <span>Saturday, May 2, 2026</span>
       </div>
 
       <div className="info-item">
         <strong>Time:</strong>
-        <span>9:00 AM - 2:00 PM</span>
+        <span>10:00 AM</span>
       </div>
 
       <div className="info-item">
         <strong>Location:</strong>
-        <span>Cocalico Community Church<br />1200 West Swartzville Road<br />Reinholds, PA 17569</span>
+        <span>Adamstown Park<br /> 272 W Main St<br />Adamstown, PA, 19501</span>
       </div>
 
       <div className="info-item">
@@ -25,10 +25,10 @@ export default function EventInfo() {
           <br />
           <p>The event includes:</p>
           <ul style={{ marginLeft: '1.5rem', marginTop: '0.5rem' }}>
-            <li>Morning worship service</li>
-            <li>Guided community walk (2-3 miles)</li>
+            <li>Community prayer walk</li>
             <li>Lunch fellowship (optional)</li>
-            <li>Activities for all ages</li>
+            <li>Welcoming for all ages</li>
+            <li>Local vendors offering additional food</li>
           </ul>
           <br />
           <p>All are welcome! Please RSVP below so we can plan accordingly, especially for lunch.</p>
