@@ -8,7 +8,7 @@ function App() {
     <div className="app">
       <header>
         <img src="/logo.png" alt="Community Faith Walk" className="header-logo" />
-        <p>Come walk with purpose. All are welcome!</p>
+        <p>A community walk and free lunch — everyone's invited!</p>
       </header>
 
       <main>
@@ -18,7 +18,7 @@ function App() {
       </main>
 
       <footer>
-        <p>&copy; 2026 Cocalico Community Church. All rights reserved.</p>
+        <p>&copy; 2026 Community Faith Walk. All rights reserved.</p>
       </footer>
     </div>
   );
